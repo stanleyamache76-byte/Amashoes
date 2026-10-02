@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMASHOES — Step Into It</title>
+<meta name="description" content="AMASHOES — shoes for kids, women and men.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👟</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ PROMO BAR ============ -->
+<div class="promo-bar" role="marquee" aria-label="Store announcements">
+  <div class="marquee" id="marquee">
+    <span>Free delivery on orders over KES 5,000</span>
+    <span>New drop: AMASHOES Trail Runner</span>
+    <span>Kids shoes — buy one get 20% off a second pair</span>
+    <span>Free delivery on orders over KES 5,000</span>
+    <span>New drop: AMASHOES Trail Runner</span>
+    <span>Kids shoes — buy one get 20% off a second pair</span>
+  </div>
+</div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar">
+  <div class="wrap">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+
+    <a href="#" class="logo" data-nav="home">AMA<span>SHOES</span></a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#" data-nav="home" class="active">Home</a>
+      <a href="#" data-nav="kids">Kids</a>
+      <a href="#" data-nav="women">Women</a>
+      <a href="#" data-nav="men">Men</a>
+      <a href="#" data-nav="contact">Contact</a>
+      <a href="#" data-nav="about">About</a>
+      <a href="#" data-nav="login" id="navAuthLink">Login</a>
+      <a href="#" data-nav="admin" id="navAdminLink" style="display:none;">Admin</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" data-nav="wishlist" aria-label="Wishlist">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7.5-4.6-10-9.1C.5 8.4 2.4 5 6 5c2 0 3.5 1 6 3.2C14.5 6 16 5 18 5c3.6 0 5.5 3.4 4 6.9C19.5 16.4 12 21 12 21z"/></svg>
+        <span class="cart-count" id="wishlistCount">0</span>
+      </button>
+      <button class="icon-btn" id="cartBtnMobile" data-nav="cart" aria-label="Cart">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M6 6h15l-1.5 9h-12L5 3H2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.4" fill="currentColor"/><circle cx="17" cy="20" r="1.4" fill="currentColor"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MOBILE SIDEBAR ============ -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<aside class="sidebar" id="sidebar" aria-hidden="true">
+  <div class="sidebar-top">
+    <span class="sidebar-logo">AMASHOES</span>
+    <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">✕</button>
+  </div>
+  <ul class="sidebar-links">
+    <li><a href="#" data-nav="home">Home</a></li>
+    <li><a href="#" data-nav="kids">Kids</a></li>
+    <li><a href="#" data-nav="women">Women</a></li>
+    <li><a href="#" data-nav="men">Men</a></li>
+    <li><a href="#" data-nav="contact">Contact</a></li>
+    <li><a href="#" data-nav="about">About</a></li>
+    <li><a href="#" data-nav="cart">Cart</a></li>
+    <li><a href="#" data-nav="wishlist">Wishlist</a></li>
+    <li><a href="#" data-nav="admin" id="sidebarAdminLink" style="display:none;">Admin</a></li>
+  </ul>
+  <div class="sidebar-bottom">
+    <a href="#" class="btn" data-nav="login" id="sidebarAuthBtn">Login / Sign up</a>
+  </div>
+</aside>
+
+<main id="main">
+
+<!-- ============================================================
+     HOME PAGE
+============================================================= -->
+<section class="page active" data-page="home">
+
+  <!-- Hero -->
+  <div class="hero" id="hero">
+    <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=1600&auto=format&fit=crop')"></div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1600&auto=format&fit=crop')"></div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=1600&auto=format&fit=crop')"></div>
+    <div class="hero-content">
+      <span class="eyebrow">NEW SEASON COLLECTION</span>
+      <h1>Every step, styled.</h1>
+      <p>Shoes for kids, women and men — built for the school run, the city walk and everything after. Find your next favorite pair.</p>
+      <button class="hero-arrow-btn" data-nav="women-all">
+        Shop the collection
+      </button>
+    </div>
+    <div class="hero-dots" id="heroDots"></div>
+  </div>
+
+  <!-- Toolbar: filter / sort / search -->
+  <div class="section wrap reveal" id="shop">
+    <div class="section-head">
+      <div>
+        <h2>Shop all products</h2>
+        <p>Handpicked pairs across kids, women and men — new arrivals added weekly.</p>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <div class="search-row">
+        <div class="search-box">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="m21 21-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <input type="search" id="searchInput" placeholder="Search products — e.g. 'running', 'red', 'kids sneaker'">
+        </div>
+      </div>
+
+      <button class="toolbar-btn btn-bare" id="filterOpenBtn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M7 12h10M10 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Filter
+      </button>
+      <label style="margin-left:auto" for="sortSelect" class="visually-hidden"></label>
+      <select id="sortSelect" class="toolbar-btn btn-bare">
+        <option value="featured">Featured</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="name-asc">Name: A–Z</option>
+        <option value="newest">Newest first</option>
+      </select>
+    </div>
+
+    <div class="grid grid-1-2-4" id="homeProductGrid"></div>
+  </div>
+
+  <!-- Category scrollers -->
+  <div class="section wrap reveal">
+    <div class="section-head"><div><h2>Kids Shoes</h2><p>Playground-proof pairs for little feet.</p></div>
+      <a href="#" class="toolbar-btn" data-nav="kids">View all</a>
+    </div>
+    <div class="scroller" id="scrollKids"></div>
+  </div>
+
+  <div class="section wrap reveal">
+    <div class="section-head"><div><h2>Women's Shoes</h2><p>From daily errands to date night.</p></div>
+      <a href="#" class="toolbar-btn" data-nav="women">View all</a>
+    </div>
+    <div class="scroller" id="scrollWomen"></div>
+  </div>
+
+  <div class="section wrap reveal">
+    <div class="section-head"><div><h2>Men's Shoes</h2><p>Built for the daily grind.</p></div>
+      <a href="#" class="toolbar-btn" data-nav="men">View all</a>
+    </div>
+    <div class="scroller" id="scrollMen"></div>
+  </div>
+
+  <!-- Offer / newsletter -->
+  <div class="section wrap reveal">
+    <div class="offer-card">
+      <div class="offer-text">
+        <h2>Get 15% off your first pair</h2>
+        <p>Subscribe for restock alerts, early access to new drops, and offers you won't find on the shelf. We send new arrivals for kids, women and men shoes, seasonal sales, and the occasional behind-the-scenes look at what's coming next — no spam, unsubscribe anytime.</p>
+      </div>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="you@email.com" required aria-label="Email address">
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     KIDS PAGE
+============================================================= -->
+<section class="page" data-page="kids">
+  <a href="#" class="back-home" data-nav="home">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M11 5 4 12l7 7M4 12h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Back to homepage
+  </a>
+  <div class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1560769629-975ec94e6a86?q=80&w=1600&auto=format&fit=crop')">
+    <div class="page-hero-content">
+      <h1>Kids Shoes</h1>
+      <p>Durable, comfy, and ready for recess.</p>
+    </div>
+  </div>
+  <div class="section wrap reveal">
+    <div class="grid grid-4" id="kidsGrid"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WOMEN PAGE
+============================================================= -->
+<section class="page" data-page="women">
+  <a href="#" class="back-home" data-nav="home">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M11 5 4 12l7 7M4 12h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Back to homepage
+  </a>
+  <div class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=1600&auto=format&fit=crop')">
+    <div class="page-hero-content">
+      <h1>Women's Shoes</h1>
+      <p>Everyday pairs with a little edge.</p>
+    </div>
+  </div>
+  <div class="section wrap reveal">
+    <div class="grid grid-4" id="womenGrid"></div>
+  </div>
+</section>
+<!-- ============================================================
+     MEN PAGE
+============================================================= -->
+<section class="page" data-page="men">
+  <a href="#" class="back-home" data-nav="home">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M11 5 4 12l7 7M4 12h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Back to homepage
+  </a>
+  <div class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=1600&auto=format&fit=crop')">
+    <div class="page-hero-content">
+      <h1>Men's Shoes</h1>
+      <p>Built for the daily grind, styled for everything else.</p>
+    </div>
+  </div>
+  <div class="section wrap reveal">
+    <div class="grid grid-4" id="menGrid"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ABOUT PAGE
+============================================================= -->
+<section class="page" data-page="about">
+  <a href="#" class="back-home" data-nav="home">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M11 5 4 12l7 7M4 12h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Back to homepage
+  </a>
+
+  <div class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1600&auto=format&fit=crop')">
+    <div class="page-hero-content">
+      <h1>About AMASHOES</h1>
+      <p>Shoes for real days, chosen by hand in Kiserian.</p>
+    </div>
+  </div>
+
+  <div class="wrap section reveal" style="max-width:900px;">
+    <p style="color:var(--umber-70); line-height:1.7; margin-bottom:14px;">AMASHOES started in Kiserian with one idea: shoes that keep up with real days — school runs, market trips, long commutes, and everything in between. We stock kids, women's and men's footwear chosen for comfort first, style second, and durability always.</p>
+    <p style="color:var(--umber-70); line-height:1.7;">Every pair on this site is picked by hand. If it wouldn't survive a Kiserian rainy season, it doesn't make the cut. From the first sketch of this shop to the last stitch on a shoebox, we've kept one question in mind: would we put this on our own kids, or wear it ourselves on a long day? If the answer is yes, it earns a place on these shelves.</p>
+  </div>
+
+  <div class="wrap section">
+    <div class="section-head"><div><h2>What we stand for</h2><p>Three things guide every pair we choose to stock.</p></div></div>
+    <div class="grid grid-3">
+      <div class="product-card" style="cursor:default;">
+        <div class="product-media"><img src="https://images.unsplash.com/photo-1595341888016-a392ef81b7de?q=80&w=800&auto=format&fit=crop" alt="Comfort-tested shoes"></div>
+        <div class="product-body">
+          <h3 class="product-name">Comfort first</h3>
+          <p style="color:var(--umber-70); font-size:.88rem; margin:0;">Every shoe is walked in before it's listed — if it's not comfortable by the second wear, it doesn't stay in the catalog.</p>
+        </div>
+      </div>
+      <div class="product-card" style="cursor:default;">
+        <div class="product-media"><img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?q=80&w=800&auto=format&fit=crop" alt="Durable shoe construction"></div>
+        <div class="product-body">
+          <h3 class="product-name">Built to last</h3>
+          <p style="color:var(--umber-70); font-size:.88rem; margin:0;">Stitching, soles and materials chosen for Kiserian's roads and rainy seasons — not just for a nice photo.</p>
+        </div>
+      </div>
+      <div class="product-card" style="cursor:default;">
+        <div class="product-media"><img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?q=80&w=800&auto=format&fit=crop" alt="AMASHOES storefront service"></div>
+        <div class="product-body">
+          <h3 class="product-name">Real, local service</h3>
+          <p style="color:var(--umber-70); font-size:.88rem; margin:0;">Visit us in Kiserian Town for sizing help, exchanges, or just to talk shoes — we're neighbors first, a shop second.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap section">
+    <div class="section-head"><div><h2>Our services</h2><p>Beyond just selling shoes.</p></div></div>
+    <div class="grid grid-3">
+      <div class="admin-card">
+        <h3 style="font-size:1rem; margin-bottom:8px;">Free in-store fitting</h3>
+        <p style="color:var(--umber-70); font-size:.88rem; margin:0;">Not sure of a size? Bring the kids in — our team measures properly instead of guessing off a chart.</p>
+      </div>
+      <div class="admin-card">
+        <h3 style="font-size:1rem; margin-bottom:8px;">Easy exchanges</h3>
+        <p style="color:var(--umber-70); font-size:.88rem; margin:0;">Wrong size or color arrived? Swap it at the Kiserian store or reach out through the Contact page.</p>
+      </div>
+      <div class="admin-card">
+        <h3 style="font-size:1rem; margin-bottom:8px;">Bulk & school orders</h3>
+        <p style="color:var(--umber-70); font-size:.88rem; margin:0;">Kitting out a whole class or team? Message us for bulk pricing on kids' school shoes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     LOGIN / SIGNUP PAGE
+============================================================= -->
+<section class="page" data-page="login">
+  <a href="#" class="back-home" data-nav="home">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M11 5 4 12l7 7M4 12h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Back to homepage
+  </a>
+  <div class="auth-wrap">
+
+    <!-- Signed-in state -->
+    <div id="authSignedIn" style="display:none;">
+      <div class="auth-card" style="text-align:center;">
+        <div class="user-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M4 20c0-4 3.5-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <span id="authUserEmail">you@email.com</span>
+        </div>
+        <h2 style="font-size:1.2rem; margin-bottom:10px;">You're logged in</h2>
+        <p style="color:var(--umber-70); font-size:.9rem; margin-bottom:22px;">Browse products, add them to your cart, and check out — your cart is saved to your account.</p>
+        <button class="btn btn-outline" id="logoutBtn" style="width:100%;">Log out</button>
+      </div>
+    </div>
+
+    <!-- Signed-out forms -->
+    <div id="authSignedOut">
+      <div class="auth-card">
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-tab="login">Log in</button>
+          <button class="auth-tab" data-tab="signup">Sign up</button>
+        </div>
+
+        <form class="auth-form active" id="loginForm" data-form="login">
+          <div class="field"><label for="loginEmail">Email</label><input type="email" id="loginEmail" required autocomplete="email"></div>
+          <div class="field"><label for="loginPassword">Password</label>
+            <div class="password-field">
+              <input type="password" id="loginPassword" required autocomplete="current-password" minlength="6">
+              <button type="button" class="password-toggle" data-toggle-for="loginPassword" aria-label="Show password">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/></svg>
+              </button>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">Log in</button>
+          <p class="auth-msg" id="loginMsg"></p>
+        </form>
+
+        <form class="auth-form" id="signupForm" data-form="signup">
+          <div class="field"><label for="signupEmail">Email</label><input type="email" id="signupEmail" required autocomplete="email"></div>
+          <div class="field"><label for="signupPassword">Password</label>
+            <div class="password-field">
+              <input type="password" id="signupPassword" required autocomplete="new-password" minlength="6">
+              <button type="button" class="password-toggle" data-toggle-for="signupPassword" aria-label="Show password">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/></svg>
+              </button>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">Create account</button>
+          <p class="auth-msg" id="signupMsg"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CART PAGE
+============================================================= -->
+<section class="page" data-page="cart">
+  <div class="cart-panel">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button class="sidebar-close" style="background:var(--sand); color:var(--umber);" id="cartCloseBtn" data-nav="home" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart-body" id="cartBody">
+      <p class="cart-empty">Your cart is empty. <a href="#" data-nav="women-all" style="color:var(--red); font-weight:600;">Start shopping →</a></p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span class="label">Total</span>
+        <span class="amount" id="cartTotal">KES 0</span>
+      </div>
+
+      <button class="btn btn-primary" style="width:100%;" id="checkoutBtn">Checkout</button>
+
+      <!-- Logged-in shopper: just needs an M-Pesa number -->
+      <div id="loggedInPhoneFields" style="display:none;">
+        <div class="field"><label for="payPhone">M-Pesa phone number</label><input type="tel" id="payPhone" placeholder="07XXXXXXXX"></div>
+        <button class="btn btn-primary" style="width:100%;" id="payNowBtn">Pay with M-Pesa</button>
+      </div>
+
+      <!-- Guest: contact details + M-Pesa number -->
+      <div id="guestCheckoutFields" style="display:none;">
+        <div class="field"><label for="guestName">Name</label><input type="text" id="guestName"></div>
+        <div class="field"><label for="guestEmail">Email</label><input type="email" id="guestEmail"></div>
+        <div class="field"><label for="guestPhone">M-Pesa phone number</label><input type="tel" id="guestPhone" placeholder="07XXXXXXXX"></div>
+        <button class="btn btn-primary" style="width:100%;" id="guestContinueBtn">Pay with M-Pesa</button>
+        <button class="btn btn-outline" style="width:100%; margin-top:8px;" data-nav="login">Log in instead</button>
+      </div>
+
+      <!-- Waiting for the customer to enter their M-Pesa PIN -->
+      <div id="paymentWaiting" style="display:none; text-align:center; padding:10px 0;">
+        <div class="spinner" aria-hidden="true"></div>
+        <p style="font-weight:600; margin:12px 0 4px;">Check your phone</p>
+        <p style="color:var(--umber-70); font-size:.85rem;">Enter your M-Pesa PIN to complete payment. This can take up to a minute.</p>
+      </div>
+
+      <div id="cartConfirmation" style="display:none; text-align:center; padding:6px 0;">
+        <p style="font-weight:600; margin-bottom:6px;">Order placed! 🎉</p>
+        <p style="color:var(--umber-70); font-size:.85rem; margin-bottom:14px;" id="cartConfirmationDetail"></p>
+        <button class="btn btn-outline" style="width:100%;" data-nav="home">Continue shopping</button>
+      </div>
+
+      <p class="auth-msg" id="checkoutMsg"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WISHLIST PAGE
+============================================================= -->
+<section class="page" data-page="wishlist">
+  <a href="#" class="back-home" data-nav="home">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M11 5 4 12l7 7M4 12h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Back to homepage
+  </a>
+  <div class="wrap section">
+    <div class="section-head"><div><h2>Your wishlist</h2><p>Saved items are private to your account.</p></div></div>
+    <div id="wishlistEmpty" style="display:none; text-align:center; padding:40px 0; color:var(--umber-45);">
+      <p>Nothing saved yet — tap the heart on any product to add it here.</p>
+    </div>
+    <div class="grid grid-4" id="wishlistGrid"></div>
+  </div>
+</section>
+<!-- ============================================================
+     PRODUCT DETAIL PAGE
+============================================================= -->
+<section class="page" data-page="product">
+  <a href="#" class="back-home" data-nav="home">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M11 5 4 12l7 7M4 12h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Back to homepage
+  </a>
+  <div class="wrap section">
+    <div class="product-detail-layout">
+      <div class="product-detail-media">
+        <img id="pdImage" src="" alt="">
+      </div>
+      <div class="product-detail-info">
+        <span class="product-cat" id="pdCategory"></span>
+        <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:12px;">
+          <h1 id="pdName" style="font-size:1.6rem;"></h1>
+          <button class="wishlist-heart" id="pdWishlistBtn" data-wishlist-toggle="" aria-label="Save to wishlist" style="position:static;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7.5-4.6-10-9.1C.5 8.4 2.4 5 6 5c2 0 3.5 1 6 3.2C14.5 6 16 5 18 5c3.6 0 5.5 3.4 4 6.9C19.5 16.4 12 21 12 21z"/></svg>
+          </button>
+        </div>
+        <div id="productRatingSummary" style="margin:6px 0 14px;"></div>
+        <div style="font-size:1.4rem; font-weight:700; color:var(--red);">
+          <span id="pdPrice"></span> <span id="pdOldPrice" class="product-old-price"></span>
+        </div>
+        <p id="pdDescription" style="color:var(--umber-70); margin:14px 0;"></p>
+
+        <p id="pdSizeNote" style="font-size:.82rem; font-weight:600; color:var(--umber-70); margin-bottom:8px;">Select a size</p>
+        <div class="chip-row" id="pdSizes" style="margin-bottom:18px;"></div>
+
+        <button class="btn btn-primary" id="pdAddToCartBtn" style="width:100%;">Add to cart</button>
+      </div>
+    </div>
+
+    <div class="reviews-section">
+      <h3 style="margin-bottom:14px;">Reviews</h3>
+
+      <div id="reviewFormWrap" style="display:none; margin-bottom:26px;">
+        <form id="reviewForm">
+          <input type="hidden" id="reviewRatingInput" value="0">
+          <div class="star-picker" id="starPicker">
+            <button type="button" data-star="1">★</button>
+            <button type="button" data-star="2">★</button>
+            <button type="button" data-star="3">★</button>
+            <button type="button" data-star="4">★</button>
+            <button type="button" data-star="5">★</button>
+          </div>
+          <div class="field"><label for="reviewCommentInput">Your review (optional)</label><textarea id="reviewCommentInput" rows="3"></textarea></div>
+          <button type="submit" class="btn btn-primary" id="reviewSubmitBtn">Submit review</button>
+          <p class="auth-msg" id="reviewMsg"></p>
+        </form>
+      </div>
+      <p id="reviewLoginPrompt" style="display:none; color:var(--umber-45); font-size:.88rem; margin-bottom:20px;">
+        <a href="#" data-nav="login" style="color:var(--red); font-weight:600;">Log in</a> to leave a review.
+      </p>
+
+      <div id="productReviewsList"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT PAGE
+============================================================= -->
+<section class="page" data-page="contact">
+  <a href="#" class="back-home" data-nav="home">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M11 5 4 12l7 7M4 12h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Back to homepage
+  </a>
+  <div class="wrap section reveal">
+    <div class="section-head"><div><h2>Get in touch</h2><p>Questions about sizing, an order, or a bulk request — we read every message.</p></div></div>
+
+    <div class="contact-grid">
+      <form class="contact-form" id="contactForm">
+        <div class="field"><label for="cName">Name</label><input type="text" id="cName" required></div>
+        <div class="field"><label for="cEmail">Email</label><input type="email" id="cEmail" required></div>
+        <div class="field"><label for="cPhone">Phone</label><input type="tel" id="cPhone"></div>
+        <div class="field"><label for="cMessage">Message</label><textarea id="cMessage" rows="5" required></textarea></div>
+        <button type="submit" class="btn btn-primary">Send message</button>
+        <p class="auth-msg" id="contactMsg"></p>
+      </form>
+
+      <div class="contact-info">
+        <div class="info-card">
+          <h4>Visit the store</h4>
+          <p>AMASHOES, Kiserian Town, Kajiado County, Kenya</p>
+        </div>
+        <div class="info-card">
+          <h4>Call or WhatsApp</h4>
+          <p>+254 700 000 000</p>
+        </div>
+        <div class="info-card">
+          <h4>Email</h4>
+          <p>hello@amashoes.co.ke</p>
+        </div>
+        <div class="info-card">
+          <h4>Follow us</h4>
+          <div class="social-row" style="margin-top:4px;">
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            </a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 3c.3 2.4 2 4 4.5 4.3V10c-1.7 0-3.2-.5-4.5-1.4V15a6 6 0 1 1-6-6c.3 0 .7 0 1 .1v2.9a3 3 0 1 0 3 3V3h2z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-frame">
+      <iframe title="AMASHOES location — Kiserian Town" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Kiserian%2C%20Kenya&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ADMIN PAGE
+============================================================= -->
+<section class="page" data-page="admin">
+  <a href="#" class="back-home" data-nav="home">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M11 5 4 12l7 7M4 12h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Back to homepage
+  </a>
+  <div class="wrap admin-wrap">
+    <div class="section-head"><div><h2>Admin — Product manager</h2><p>Create, update and remove products. Protected by Supabase RLS — only accounts with the <code>admin</code> role can write.</p></div></div>
+
+    <div id="adminLocked" class="admin-card admin-locked">
+      Log in with an admin account to manage products.
+      <div style="margin-top:16px;"><a href="#" class="btn btn-primary" data-nav="login">Log in</a></div>
+    </div>
+
+    <div id="adminUnlocked" class="admin-grid" style="display:none;">
+      <div class="admin-card">
+        <h3 id="adminFormTitle">Add a product</h3>
+        <form id="adminForm">
+          <input type="hidden" id="adminProductId">
+          <div class="field"><label for="apName">Name</label><input type="text" id="apName" required></div>
+          <div class="grid2">
+            <div class="field"><label for="apPrice">Price (KES)</label><input type="number" id="apPrice" min="0" required></div>
+            <div class="field"><label for="apCategory">Category</label>
+              <select id="apCategory" required>
+                <option value="kids">Kids</option>
+                <option value="women">Women</option>
+                <option value="men">Men</option>
+              </select>
+            </div>
+          </div>
+          <div class="grid2">
+            <div class="field"><label for="apColor">Color</label><input type="text" id="apColor" placeholder="e.g. Red"></div>
+            <div class="field"><label for="apSizes">Sizes (comma separated)</label><input type="text" id="apSizes" placeholder="e.g. 36,37,38"></div>
+          </div>
+          <div class="field">
+            <label for="apImage">Product image</label>
+            <input type="file" id="apImage" accept="image/*">
+            <img id="apImagePreview" src="" alt="" style="display:none; margin-top:8px; width:76px; height:76px; object-fit:cover; border-radius:10px; border:1px solid var(--line);">
+            <p style="font-size:.75rem; color:var(--umber-45); margin-top:6px;">When editing, leave this empty to keep the current image.</p>
+          </div>
+          <div class="field"><label for="apStock">Stock</label><input type="number" id="apStock" min="0" value="10"></div>
+          <div style="display:flex; gap:10px;">
+            <button type="submit" class="btn btn-primary" style="flex:1;" id="adminSubmitBtn">Add product</button>
+            <button type="button" class="btn btn-outline" id="adminCancelEdit" style="display:none;">Cancel</button>
+          </div>
+          <p class="auth-msg" id="adminMsg"></p>
+        </form>
+      </div>
+
+      <div class="admin-card">
+        <h3>All products</h3>
+        <div style="overflow-x:auto;">
+          <table class="admin-table">
+            <thead><tr><th>Name</th><th>Category</th><th>Price</th><th>Stock</th><th>Actions</th></tr></thead>
+            <tbody id="adminTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     LEGAL PAGES
+============================================================= -->
+<section class="page" data-page="privacy">
+  <a href="#" class="back-home" data-nav="home">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M11 5 4 12l7 7M4 12h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Back to homepage
+  </a>
+  <div class="wrap section legal-page">
+    <h1>Privacy Policy</h1>
+    <p class="legal-updated">Last updated: 2026</p>
+
+    <h3>What we collect</h3>
+    <p>When you create an account, we collect your email address. If you check out as a guest, we collect the name, email and phone number you provide for that order. Product reviews you submit are linked to your account. We do not collect payment card details directly — those are handled by our payment provider, not stored on this site.</p>
+
+    <h3>How we store it</h3>
+    <p>Your data is stored with Supabase, our backend provider, inside a Postgres database protected by row-level security — meaning our own database rules stop any customer from reading another customer's cart, orders, or account details, even if there were a bug elsewhere on the site.</p>
+
+    <h3>Cookies & local storage</h3>
+    <p>Before you log in, items you add to your cart are kept in your browser's local storage only — not sent anywhere — until you check out. We don't use third-party advertising trackers.</p>
+
+    <h3>Your rights</h3>
+    <p>You can ask us to access, correct, or delete your personal data at any time by reaching out through the <a href="#" data-nav="contact" style="color:var(--red); font-weight:600;">Contact page</a>. Deleting your account removes your profile and order history from our active systems.</p>
+
+    <h3>Contact</h3>
+    <p>Questions about this policy can be sent to hello@amashoes.co.ke or through our Contact page.</p>
+  </div>
+</section>
+
+<section class="page" data-page="terms">
+  <a href="#" class="back-home" data-nav="home">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M11 5 4 12l7 7M4 12h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Back to homepage
+  </a>
+  <div class="wrap section legal-page">
+    <h1>Terms of Service</h1>
+    <p class="legal-updated">Last updated: 2026</p>
+    <h3>Orders</h3>
+    <p>Placing an order is an offer to buy at the listed price. We'll confirm your order and delivery details before it ships. Prices are listed in Kenyan Shillings (KES) and may change without notice; the price at the time you order is the one you pay.</p>
+
+    <h3>Accounts</h3>
+    <p>You're responsible for keeping your login details secure. Guest checkouts don't require a password, but the order details you provide (name, email, phone) are used solely to fulfil that order.</p>
+
+    <h3>Reviews</h3>
+    <p>Reviews should reflect a genuine experience with the product. We reserve the right to remove reviews that are abusive, fraudulent, or unrelated to the product.</p>
+
+    <h3>Availability</h3>
+    <p>Stock is shown as accurately as we can manage, but availability isn't guaranteed until an order is confirmed. If an item you ordered turns out to be unavailable, we'll contact you with options.</p>
+
+    <h3>Liability</h3>
+    <p>We aim for accuracy in product descriptions and images, but minor variations (e.g. shade of a color) can occur between photos and the physical product.</p>
+  </div>
+</section>
+
+<section class="page" data-page="returns">
+  <a href="#" class="back-home" data-nav="home">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M11 5 4 12l7 7M4 12h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Back to homepage
+  </a>
+  <div class="wrap section legal-page">
+    <h1>Returns Policy</h1>
+    <p class="legal-updated">Last updated: 2026</p>
+
+    <h3>Return window</h3>
+    <p>You can return an unworn pair, in its original box, within 7 days of delivery for an exchange or store credit. Bring your order confirmation (or order number) with you.</p>
+
+    <h3>How to return</h3>
+    <p>Visit us in-store in Kiserian Town, or reach out through the <a href="#" data-nav="contact" style="color:var(--red); font-weight:600;">Contact page</a> to arrange a return if you're outside the local area.</p>
+
+    <h3>Condition</h3>
+    <p>Shoes must be unworn, with tags and packaging intact, to qualify for a return. Items showing signs of wear can only be assessed case-by-case for manufacturing defects.</p>
+
+    <h3>Refunds</h3>
+    <p>Approved returns are processed as store credit by default; refunds to your original payment method can be requested and are processed within a few business days of the item being received.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FILTER SIDEBAR (shop page)
+============================================================= -->
+<div class="filter-overlay" id="filterOverlay"></div>
+<aside class="filter-panel" id="filterPanel" aria-hidden="true">
+  <div class="filter-panel-head">
+    <h3>Filter products</h3>
+    <button class="sidebar-close" style="background:var(--sand); color:var(--umber);" id="filterCloseBtn" aria-label="Close filters">✕</button>
+  </div>
+  <div class="filter-group">
+    <h4>Category</h4>
+    <div class="chip-row" id="filterCategory">
+      <button class="chip active" data-value="all">All</button>
+      <button class="chip" data-value="kids">Kids</button>
+      <button class="chip" data-value="women">Women</button>
+      <button class="chip" data-value="men">Men</button>
+    </div>
+  </div>
+  <div class="filter-group">
+    <h4>Size</h4>
+    <div class="chip-row" id="filterSize">
+      <button class="chip" data-value="30">30</button>
+      <button class="chip" data-value="32">32</button>
+      <button class="chip" data-value="36">36</button>
+      <button class="chip" data-value="38">38</button>
+      <button class="chip" data-value="40">40</button>
+      <button class="chip" data-value="42">42</button>
+      <button class="chip" data-value="44">44</button>
+    </div>
+  </div>
+  <div class="filter-group">
+    <h4>Color</h4>
+    <div class="swatch-row" id="filterColor">
+      <button class="swatch" data-value="red" style="background:#D62839" aria-label="Red"></button>
+      <button class="swatch" data-value="orange" style="background:#FF5A1F" aria-label="Orange"></button>
+      <button class="swatch" data-value="white" style="background:#fff" aria-label="White"></button>
+      <button class="swatch" data-value="black" style="background:#222" aria-label="Black"></button>
+      <button class="swatch" data-value="beige" style="background:#e3c9a3" aria-label="Beige"></button>
+      <button class="swatch" data-value="blue" style="background:#3a6ea5" aria-label="Blue"></button>
+    </div>
+  </div>
+  <div class="filter-group">
+    <h4>Price range</h4>
+    <input type="range" id="filterPrice" min="500" max="15000" step="500" value="15000" style="width:100%;">
+    <div style="display:flex; justify-content:space-between; font-size:.8rem; color:var(--umber-70); margin-top:4px;">
+      <span>KES 0</span><span id="filterPriceVal">KES 15,000</span>
+    </div>
+  </div>
+  <div class="filter-panel-foot">
+    <button class="btn btn-primary" style="width:100%;" id="filterApplyBtn">Apply filters</button>
+    <button class="btn btn-outline" style="width:100%; margin-top:10px;" id="filterResetBtn">Reset</button>
+  </div>
+</aside>
+
+<!-- ============================================================
+     FOOTER
+============================================================= -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="footer-logo">AMASHOES</div>
+      <p class="footer-tag">Shoes for kids, women and men — built for real days, from Kiserian to wherever you're headed.</p>
+      <div class="social-row">
+        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 3c.3 2.4 2 4 4.5 4.3V10c-1.7 0-3.2-.5-4.5-1.4V15a6 6 0 1 1-6-6c.3 0 .7 0 1 .1v2.9a3 3 0 1 0 3 3V3h2z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Shop</h5>
+      <ul>
+        <li><a href="#" data-nav="kids">Kids</a></li>
+        <li><a href="#" data-nav="women">Women</a></li>
+        <li><a href="#" data-nav="men">Men</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <ul>
+        <li><a href="#" data-nav="about">About</a></li>
+        <li><a href="#" data-nav="contact">Contact</a></li>
+        <li><a href="#" data-nav="admin">Admin</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <ul>
+        <li><a href="#" data-nav="privacy">Privacy policy</a></li>
+        <li><a href="#" data-nav="terms">Terms of service</a></li>
+        <li><a href="#" data-nav="returns">Returns policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© <span id="year"></span> AMASHOES. All rights reserved.</span>
+    <span>Kiserian Town, Kenya</span>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<!-- ============================================================
+     WHATSAPP FLOATING BUTTON (bottom right)
+============================================================= -->
+<a href="https://wa.me/254702903502" target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Chat with us on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.4-1.41a9.86 9.86 0 0 0 4.64 1.18h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm5.79 14.08c-.24.68-1.4 1.3-1.93 1.37-.5.07-1.09.1-1.76-.11-.4-.13-.92-.3-1.58-.59-2.78-1.2-4.6-4-4.74-4.19-.14-.19-1.13-1.5-1.13-2.86 0-1.36.71-2.02.96-2.3.24-.27.53-.34.71-.34h.51c.16 0 .38-.06.6.46.23.54.76 1.9.83 2.03.07.14.11.3.02.49-.09.19-.14.3-.27.46-.14.17-.29.37-.41.5-.14.14-.28.3-.12.57.16.27.7 1.17 1.52 1.9 1.04.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.17.68-.8.86-1.07.18-.27.36-.23.6-.14.25.1 1.56.74 1.83.87.27.14.45.2.51.32.07.11.07.65-.17 1.33z"/></svg>
+</a>
+
+<!-- ============================================================
+     BOTTOM NAVIGATION (mobile)
+============================================================= -->
+<nav class="bottom-nav" id="bottomNav" aria-label="Quick navigation">
+  <a href="#" data-nav="home" class="bottom-nav-item" data-bottom-nav="home">
+    <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9h12v-9"/></svg>
+    <span>Home</span>
+  </a>
+  <a href="#" id="bottomNavShop" class="bottom-nav-item" data-bottom-nav="shop">
+    <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6h15l-1.5 9h-12L5 3H2"/><circle cx="9" cy="20" r="1.4" fill="currentColor"/><circle cx="17" cy="20" r="1.4" fill="currentColor"/></svg>
+    <span>Shop</span>
+  </a>
+  <a href="#" data-nav="cart" class="bottom-nav-item" data-bottom-nav="cart">
+    <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L21 8H6"/></svg>
+    <span>Cart</span>
+    <span class="bottom-nav-badge" id="bottomCartCount">0</span>
+  </a>
+  <a href="#" data-nav="wishlist" class="bottom-nav-item" data-bottom-nav="wishlist">
+    <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7.5-4.6-10-9.1C.5 8.4 2.4 5 6 5c2 0 3.5 1 6 3.2C14.5 6 16 5 18 5c3.6 0 5.5 3.4 4 6.9C19.5 16.4 12 21 12 21z"/></svg>
+    <span>Wishlist</span>
+    <span class="bottom-nav-badge" id="bottomWishlistCount">0</span>
+  </a>
+  <a href="#" data-nav="login" class="bottom-nav-item" data-bottom-nav="login">
+    <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-6 8-6s8 2 8 6"/></svg>
+    <span>Account</span>
+  </a>
+</nav>
+
+<!-- Supabase JS client -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="config.js"></script>
+<script src="product-data.js"></script>
+<script src="auth.js"></script>
+<script src="wishlist.js"></script>
+<script src="reviews.js"></script>
+<script src="product-detail.js"></script>
+<script src="products.js"></script>
+<script src="cart.js"></script>
+<script src="admin.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
